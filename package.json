@@ -1,5 +1,5 @@
 {
-  "name": "nq-jslib-base",
+  "name": "nq-tslib-base",
   "version": "0.0.1",
   "description": "在H5页面中调用快应用功能",
   "main": "dist/index.js",
@@ -40,10 +40,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/nianqin/nq-jslib-base.git"
+    "url": "git://github.com/nianqin/nq-tslib-base.git"
   },
   "bugs": {
-    "url": "https://github.com/nianqin/nq-jslib-base/issues"
+    "url": "https://github.com/nianqin/nq-tslib-base/issues"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

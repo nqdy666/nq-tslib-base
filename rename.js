@@ -3,8 +3,8 @@ var path = require('path');
 var cdkit = require('cdkit');
 
 
-var fromName1 = 'jslib-base';
-var toName1 = 'nq-jslib-base';
+var fromName1 = 'nq-jslib-base';
+var toName1 = 'nq-tslib-base';
 
 var fromName2 = 'yanhaijing';
 var toName2 = 'nianqin';

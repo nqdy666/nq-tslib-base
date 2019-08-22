@@ -1,17 +1,17 @@
-# [nq-jslib-base](https://github.com/nianqin/nq-jslib-base)
-[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/nianqin/nq-jslib-base)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nianqin/nq-jslib-base/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/nianqin/nq-jslib-base.svg?branch=master)](https://travis-ci.org/nianqin/nq-jslib-base)
-[![Coveralls](https://img.shields.io/coveralls/nianqin/nq-jslib-base.svg)](https://coveralls.io/github/nianqin/nq-jslib-base)
-[![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/nq-jslib-base)
-[![NPM downloads](http://img.shields.io/npm/dm/nq-jslib-base.svg?style=flat-square)](http://www.npmtrends.com/nq-jslib-base)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/nianqin/nq-jslib-base.svg)](http://isitmaintained.com/project/nianqin/nq-jslib-base "Percentage of issues still open")
+# [nq-tslib-base](https://github.com/nianqin/nq-tslib-base)
+[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/nianqin/nq-tslib-base)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nianqin/nq-tslib-base/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/nianqin/nq-tslib-base.svg?branch=master)](https://travis-ci.org/nianqin/nq-tslib-base)
+[![Coveralls](https://img.shields.io/coveralls/nianqin/nq-tslib-base.svg)](https://coveralls.io/github/nianqin/nq-tslib-base)
+[![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/nq-tslib-base)
+[![NPM downloads](http://img.shields.io/npm/dm/nq-tslib-base.svg?style=flat-square)](http://www.npmtrends.com/nq-tslib-base)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/nianqin/nq-tslib-base.svg)](http://isitmaintained.com/project/nianqin/nq-tslib-base "Percentage of issues still open")
 
 [English](./README.md) | 简体中文
 
 最好用的 `JS|TS` 第三方库脚手架，fork 或 clone 本仓库，即可搭建完成一个新库的基础框架
 
-**基于nq-jslib-base的库，都可以分享到[jsmini](https://github.com/jsmini)平台**
+**基于nq-tslib-base的库，都可以分享到[jsmini](https://github.com/jsmini)平台**
 
 ## :star: 特性
 
@@ -112,13 +112,13 @@ quickApp1.open(option)
 通过npm下载安装代码
 
 ```bash
-$ npm install --save nq-jslib-base
+$ npm install --save nq-tslib-base
 ```
 
 如果你是node环境
 
 ```js
-const QuickApp = require('nq-jslib-base');
+const QuickApp = require('nq-tslib-base');
 const quickApp1 = new QuickApp();
 quickApp1.open({
                     path: '/Home',
@@ -141,7 +141,7 @@ quickApp1.open({
 如果你是webpack等环境
 
 ```js
-import QuickApp from 'nq-jslib-base';
+import QuickApp from 'nq-tslib-base';
 const quickApp1 = new QuickApp();
 quickApp1.open({
                     path: '/Home',
@@ -164,7 +164,7 @@ quickApp1.open({
 如果你是requirejs环境
 
 ```js
-requirejs(['node_modules/nq-jslib-base/dist/index.aio.js'], function (QuickApp) {
+requirejs(['node_modules/nq-tslib-base/dist/index.aio.js'], function (QuickApp) {
     const quickApp1 = new QuickApp();
     quickApp1.open({
                         path: '/Home',
@@ -188,7 +188,7 @@ requirejs(['node_modules/nq-jslib-base/dist/index.aio.js'], function (QuickApp) 
 如果你是浏览器环境
 
 ```html
-<script src="node_modules/nq-jslib-base/dist/index.aio.js"></script>
+<script src="node_modules/nq-tslib-base/dist/index.aio.js"></script>
 ```
 
 ## :bookmark_tabs: 文档
@@ -244,7 +244,7 @@ $ npm publish
 
 ## 贡献者列表
 
-[contributors](https://github.com/nianqin/nq-jslib-base/graphs/contributors)
+[contributors](https://github.com/nianqin/nq-tslib-base/graphs/contributors)
 
 ## :gear: 更新日志
 [CHANGELOG.md](./CHANGELOG.md)
@@ -255,7 +255,7 @@ $ npm publish
 ## :bulb: 谁在使用
 
 - [jsmini](https://github.com/jsmini)
-- [...](https://github.com/nianqin/nq-jslib-base/issues/10)
+- [...](https://github.com/nianqin/nq-tslib-base/issues/10)
 
 ## 相关链接
 

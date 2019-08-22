@@ -3,19 +3,19 @@ var babel = require('rollup-plugin-babel');
 
 var pkg = require('../package.json');
 
-// compatible with nq-jslib-base and @nianqin/nq-jslib-base
-// @nianqin/nq-jslib-base -> nq-jslib-base
+// compatible with nq-tslib-base and @nianqin/nq-tslib-base
+// @nianqin/nq-tslib-base -> nq-tslib-base
 var name = pkg.name.split('/').pop();
-// @nianqin/nq-jslib-base -> nianqin_nq-jslib-base
+// @nianqin/nq-tslib-base -> nianqin_nq-tslib-base
 // var name = pkg.name.replace('@', '').replace(/\//g, '_');
 var version = pkg.version;
 
 var banner = 
 `/*!
- * ${pkg.name} ${version} (https://github.com/nianqin/nq-jslib-base)
- * API https://github.com/nianqin/nq-jslib-base/blob/master/doc/api.md
+ * ${pkg.name} ${version} (https://github.com/nianqin/nq-tslib-base)
+ * API https://github.com/nianqin/nq-tslib-base/blob/master/doc/api.md
  * Copyright 2017-${(new Date).getFullYear()} nianqin. All Rights Reserved
- * Licensed under MIT (https://github.com/nianqin/nq-jslib-base/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/nianqin/nq-tslib-base/blob/master/LICENSE)
  */
 `;
 
