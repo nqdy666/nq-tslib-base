@@ -10,8 +10,8 @@ var name = pkg.name.split('/').pop();
 // var name = pkg.name.replace('@', '').replace(/\//g, '_');
 var version = pkg.version;
 
-var banner = 
-`/*!
+var banner =
+  `/*!
  * ${pkg.name} ${version} (https://github.com/nianqin/nq-tslib-base)
  * API https://github.com/nianqin/nq-tslib-base/blob/master/doc/api.md
  * Copyright 2017-${(new Date).getFullYear()} nianqin. All Rights Reserved
@@ -22,41 +22,45 @@ var banner =
 var type = pkg.srctype === 'ts' ? 'ts' : 'js';
 
 function getCompiler(opt) {
-    if (type === 'js') {
-        return babel({
-            babelrc: false,
-            presets: [
-                [
-                    '@babel/preset-env',
-                    {
-                        'targets': {
-                          'browsers': 'last 2 versions, > 1%, ie >= 6, Android >= 4, iOS >= 6, and_uc > 9',
-                          'node': '0.10'
-                        },
-                        'modules': false,
-                        'loose': false
-                    }
-                ]
-            ],
-            plugins: [
-                [
-                    '@babel/plugin-transform-runtime',
-                    {
-                        'helpers': false,
-                        'regenerator': false
-                    }
-                ]
-            ],
-            runtimeHelpers: true,
-            exclude: 'node_modules/**'
-        });
-    }
+  if (type === 'js') {
+    return babel({
+      babelrc: false,
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            'targets': {
+              'browsers': 'last 2 versions, > 1%, ie >= 6, Android >= 4, iOS >= 6, and_uc > 9',
+              'node': '0.10'
+            },
+            'modules': false,
+            'loose': false
+          }
+        ]
+      ],
+      plugins: [
+        [
+          '@babel/plugin-transform-runtime',
+          {
+            'helpers': false,
+            'regenerator': false
+          }
+        ]
+      ],
+      runtimeHelpers: true,
+      exclude: 'node_modules/**'
+    });
+  }
 
-    opt = opt || {
-        tsconfigOverride: { compilerOptions : { module: 'ES2015' } }
+  opt = opt || {
+    tsconfigOverride: {
+      compilerOptions: {
+        module: 'ES2015'
+      }
     }
+  }
 
-    return typescript(opt);
+  return typescript(opt);
 }
 
 exports.type = type;
