@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "A modern Typescript library scaffolding",
   "main": "dist/index.js",
-  "jsnext:main": "dist/index.esm.js",
-  "module": "dist/index.esm.js",
+  "jsnext:main": "es/index.js",
+  "module": "lib/index.js",
   "sideEffects": false,
   "srctype": "ts",
   "scripts": {

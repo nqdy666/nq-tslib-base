@@ -14,7 +14,7 @@ var banner =
   `/*!
  * ${pkg.name} ${version} (https://github.com/nianqin/nq-tslib-base)
  * API https://github.com/nianqin/nq-tslib-base/blob/master/doc/api.md
- * Copyright 2017-${(new Date).getFullYear()} nianqin. All Rights Reserved
+ * Copyright 2019-${(new Date).getFullYear()} nianqin. All Rights Reserved
  * Licensed under MIT (https://github.com/nianqin/nq-tslib-base/blob/master/LICENSE)
  */
 `;
@@ -30,7 +30,7 @@ function getCompiler(opt) {
           '@babel/preset-env',
           {
             'targets': {
-              'browsers': 'last 2 versions, > 1%, ie >= 6, Android >= 4, iOS >= 6, and_uc > 9',
+              'browsers': 'last 2 versions, > 1%, ie >= 8, Android >= 4, iOS >= 6, and_uc > 9',
               'node': '0.10'
             },
             'modules': false,
