@@ -19,7 +19,7 @@
     "build:umd.min": "cross-env NODE_ENV=production npm run build:umd",
     "build:lib": "babel src -d lib --extensions=.ts --no-babelrc --presets=@babel/preset-env,@babel/preset-typescript",
     "build:es": "babel src -d es --extensions=.ts --no-babelrc --presets=@babel/preset-typescript",
-    "build": "npm run clean && npm run build:cjs && npm run build:es && npm run build:umd && npm run build:esm && npm run build:umd && npm run build:umd.min && build:cjs.min",
+    "build": "npm run clean && npm run build:lib && npm run build:es && npm run build:umd && npm run build:cjs && npm run build:esm && npm run build:umd.min && npm run build:cjs.min",
     "test": "npm run lint && nyc --nycrc-path .nycrc-ts mocha",
     "coveralls": "nyc --nycrc-path .nycrc-ts report --reporter=text-lcov | coveralls",
     "release": "npm test && npm run build && git commit -am $npm_package_version && git push && git tag $npm_package_version && git push --tags"
