@@ -1,3 +1,4 @@
-export default function helloworld (): void {
-  console.log('hell world');
+// plus a + b
+export function add (a: number, b: number): number {
+  return a + b
 }
