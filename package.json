@@ -1,6 +1,6 @@
 {
   "name": "nq-tslib-base",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A modern Typescript library scaffolding",
   "main": "dist/index.js",
   "jsnext:main": "es/index.js",
@@ -28,7 +28,7 @@
     "build": "npm run clean && npm run build:lib && npm run build:es && npm run build:umd && npm run build:cjs && npm run build:esm && npm run build:umd.min && npm run build:cjs.min",
     "test": "npm run lint && nyc --nycrc-path .nycrc-ts mocha",
     "coveralls": "nyc --nycrc-path .nycrc-ts report --reporter=text-lcov | coveralls",
-    "release": "npm test && npm run build && git commit -am $npm_package_version && git push && git tag $npm_package_version && git push --tags"
+    "release": "npm test && npm run build && standard-version"
   },
   "author": "nqdy666",
   "license": "MIT",
@@ -68,6 +68,7 @@
     "rollup-plugin-typescript2": "^0.22.1",
     "rollup-plugin-uglify": "^6.0.2",
     "source-map-support": "^0.5.13",
+    "standard-version": "^7.0.0",
     "ts-node": "^8.3.0",
     "tslib": "^1.10.0",
     "typescript": "^3.5.3"
