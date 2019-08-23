@@ -1,12 +1,12 @@
 var path = require('path');
-
+var { camelCase } = require('lodash')
 var cdkit = require('cdkit');
 
-var fromName1 = 'nq-jslib-base';
-var toName1 = 'nq-tslib-base';
+var fromLibName = 'nq-jslib-base';
+var toLibName = 'nq-tslib-base';
 
-var fromName2 = 'nianqin';
-var toName2 = 'nqdy666';
+var formAuthorName = 'nianqin';
+var toAuthorName = 'nqdy666';
 
 
 function getFullPath(filename) {
@@ -31,13 +31,17 @@ const config = [{
       });
     },
     replace: [{
-        from: fromName1,
-        to: toName1,
+        from: fromLibName,
+        to: toLibName,
       },
       {
-        from: fromName2,
-        to: toName2,
-      }
+        from: camelCase(fromLibName),
+        to: camelCase(toLibName),
+      },
+      {
+        from: formAuthorName,
+        to: toAuthorName,
+      },
     ]
   }]
 }, ];
