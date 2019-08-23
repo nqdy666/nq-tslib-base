@@ -2,12 +2,11 @@ var path = require('path');
 
 var cdkit = require('cdkit');
 
-
 var fromName1 = 'nq-jslib-base';
 var toName1 = 'nq-tslib-base';
 
-var fromName2 = 'yanhaijing';
-var toName2 = 'nianqin';
+var fromName2 = 'nianqin';
+var toName2 = 'nqdy666';
 
 
 function getFullPath(filename) {

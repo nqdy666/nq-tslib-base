@@ -30,14 +30,14 @@
     "coveralls": "nyc --nycrc-path .nycrc-ts report --reporter=text-lcov | coveralls",
     "release": "npm test && npm run build && git commit -am $npm_package_version && git push && git tag $npm_package_version && git push --tags"
   },
-  "author": "nianqin",
+  "author": "nqdy666",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/nianqin/nq-tslib-base.git"
+    "url": "https://github.com/nqdy666/nq-tslib-base"
   },
   "bugs": {
-    "url": "https://github.com/nianqin/nq-tslib-base/issues"
+    "url": "https://github.com/nqdy666/nq-tslib-base/issues"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

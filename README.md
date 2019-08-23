@@ -1,17 +1,15 @@
-# [nq-tslib-base](https://github.com/nianqin/nq-tslib-base)
-[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/nianqin/nq-tslib-base)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nianqin/nq-tslib-base/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/nianqin/nq-tslib-base.svg?branch=master)](https://travis-ci.org/nianqin/nq-tslib-base)
-[![Coveralls](https://img.shields.io/coveralls/nianqin/nq-tslib-base.svg)](https://coveralls.io/github/nianqin/nq-tslib-base)
+# [nq-tslib-base](https://github.com/nqdy666/nq-tslib-base)
+[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/nqdy666/nq-tslib-base)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nqdy666/nq-tslib-base/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/nqdy666/nq-tslib-base.svg?branch=master)](https://travis-ci.org/nqdy666/nq-tslib-base)
+[![Coveralls](https://img.shields.io/coveralls/nqdy666/nq-tslib-base.svg)](https://coveralls.io/github/nqdy666/nq-tslib-base)
 [![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/nq-tslib-base)
 [![NPM downloads](http://img.shields.io/npm/dm/nq-tslib-base.svg?style=flat-square)](http://www.npmtrends.com/nq-tslib-base)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/nianqin/nq-tslib-base.svg)](http://isitmaintained.com/project/nianqin/nq-tslib-base "Percentage of issues still open")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/nqdy666/nq-tslib-base.svg)](http://isitmaintained.com/project/nqdy666/nq-tslib-base "Percentage of issues still open")
 
 简体中文 | [English](./README.en.md)
 
 最好用的 `TS` 第三方库脚手架，fork 或 clone 本仓库，即可搭建完成一个新库的基础框架
-
-**基于nq-tslib-base的库，都可以分享到[jsmini](https://github.com/jsmini)平台**
 
 ## :star: 特性
 
@@ -55,59 +53,10 @@
 
 ## :rocket: 使用者指南
 
-可查看 demo目录 范例, option 可参考 [快应用](https://doc.quickapp.cn/tutorial/platform/url-jump-configuration.html)
+可查看 demo目录 范例
 ```javascript
 
-const quickApp1 = new QuickApp();
-const option = {
-    path: '/Home',
-    params: {
-        path: 'Detail',
-        title: '测试文章',
-        url: 'http://test.wkanx.com/tmp/build/index.html',
-        id: '3163241194045440',
-        cid: 9999999,
-        type: 0,
-        template: 9999999,
-        utm_source: 'push',
-        pop: 0,
-    },
-    packageName: 'xxx',
-    confirm: ''
-}
-quickApp1.open(option)
-
-
 ```
-
-也可以在初始化 new QuickApp 时传入 packageName, 使用时 open 可以不传则默认使用初始化的packageName, 也可以传packageName 打开不同的快应用
-
-```javascript
-
-const quickApp1 = new QuickApp({
-    packageName: 'xxx',
-});
-const option = {
-    path: '/Home',
-    params: {
-        path: 'Detail',
-        title: '测试文章',
-        url: 'http://test.wkanx.com/tmp/build/index.html',
-        id: '3163241194045440',
-        cid: 9999999,
-        type: 0,
-        template: 9999999,
-        utm_source: 'push',
-        pop: 0,
-    },
-    packageName: 'xxx',
-    confirm: ''
-}
-quickApp1.open(option)
-
-```
-
-
 
 通过npm下载安装代码
 
@@ -119,88 +68,30 @@ $ npm install --save nq-tslib-base
 
 ```js
 const QuickApp = require('nq-tslib-base');
-const quickApp1 = new QuickApp();
-quickApp1.open({
-                    path: '/Home',
-                    params: {
-                        path: 'Detail',
-                        title: '测试文章',
-                        url: 'http://test.wkanx.com/tmp/build/index.html',
-                        id: '3163241194045440',
-                        cid: 9999999,
-                        type: 0,
-                        template: 9999999,
-                        utm_source: 'push',
-                        pop: 0,
-                    },
-                    packageName: 'xxx',
-                    confirm: ''
-                });
+
 ```
 
 如果你是webpack等环境
 
 ```js
 import QuickApp from 'nq-tslib-base';
-const quickApp1 = new QuickApp();
-quickApp1.open({
-                    path: '/Home',
-                    params: {
-                        path: 'Detail',
-                        title: '测试文章',
-                        url: 'http://test.wkanx.com/tmp/build/index.html',
-                        id: '3163241194045440',
-                        cid: 9999999,
-                        type: 0,
-                        template: 9999999,
-                        utm_source: 'push',
-                        pop: 0,
-                    },
-                    packageName: 'xxx',
-                    confirm: ''
-                });
 ```
 
 如果你是requirejs环境
 
 ```js
-requirejs(['node_modules/nq-tslib-base/dist/index.aio.js'], function (QuickApp) {
-    const quickApp1 = new QuickApp();
-    quickApp1.open({
-                        path: '/Home',
-                        params: {
-                            path: 'Detail',
-                            title: '测试文章',
-                            url: 'http://test.wkanx.com/tmp/build/index.html',
-                            id: '3163241194045440',
-                            cid: 9999999,
-                            type: 0,
-                            template: 9999999,
-                            utm_source: 'push',
-                            pop: 0,
-                        },
-                        packageName: 'xxx',
-                        confirm: ''
-                    });
-})
 ```
 
 如果你是浏览器环境
 
 ```html
-<script src="node_modules/nq-tslib-base/dist/index.aio.js"></script>
+<script src="node_modules/nq-tslib-base/dist/nq-tslib-base.min.js"></script>
 ```
 
 ## :bookmark_tabs: 文档
 [API](./doc/api.zh-CN.md)
 
 ## :kissing_heart: 贡献者指南
-
-支持JS 和 TS 切换，需要更改下面的地方
-
--  `package.json`中的`srctype`和`scripts`
--  `test/test.js`中`require`文件的方式
--  `test/browser/index.html`中`require`文件的方式
 
 首次运行需要先安装依赖
 
@@ -244,7 +135,7 @@ $ npm publish
 
 ## 贡献者列表
 
-[contributors](https://github.com/nianqin/nq-tslib-base/graphs/contributors)
+[contributors](https://github.com/nqdy666/nq-tslib-base/graphs/contributors)
 
 ## :gear: 更新日志
 [CHANGELOG.md](./CHANGELOG.md)
@@ -253,6 +144,3 @@ $ npm publish
 [TODO.md](./TODO.md)
 
 ## :bulb: 谁在使用
-
-- [jsmini](https://github.com/jsmini)
-- [...](https://github.com/nianqin/nq-tslib-base/issues/10)
