@@ -140,3 +140,9 @@ fabric.properties
 
 # rollup-plugin-typescript
 .rpt2_cache/
+
+# es
+es/
+
+# lib
+lib/
