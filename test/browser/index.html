@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Mocha</title>
+    <title>Mocha test</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../node_modules/mocha/mocha.css" />
@@ -18,22 +18,19 @@
     <script>
         mocha.setup('bdd');
     </script>
-    <script type="module" src="../../dist/index.aio.js"></script>
+    <script src="../../dist/nq-tslib-base.js"></script>
     <script>
-        // var libs = {
-        //     'expect.js': expect,
-        //     // js
-        //     '../src/index.js': window['nq-tslib-base']
-        //     // ts
-        //     // '../src/index.ts': window['nq-tslib-base']
-        // };
-        // var require = function(path) {
-        //     return libs[path];
-        // }
+        var libs = {
+            'expect.js': expect,
+            // ts
+            '../src/index.ts': window['nqTslibBase']
+        };
+        var require = function(path) {
+            return libs[path];
+        }
     </script>
-    <!--<script type="module" src="../utils.js"></script>-->
-    <script type="module" src="../test.js"></script>
-    <script type="module">
+    <script src="../test.js"></script>
+    <script>
         mocha.checkLeaks();
         mocha.run();
     </script>
