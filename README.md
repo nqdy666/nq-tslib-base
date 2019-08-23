@@ -23,7 +23,6 @@
 - 集成可持续构建工具[travis-ci](https://www.travis-ci.org/)
 - 支持自定义banner
 - 支持一键重命名
-- 支持[sideEffects](https://juejin.im/post/5b4ff9ece51d45190c18bb65)
 - 集成ISSUE_TEMPLATE
 
 > 注意: 如果不同时使用 `export` 与 `export default` 可打开 `legacy模式`，`legacy模式` 下的模块系统可以兼容 `ie6-8`，见rollup配置文件
