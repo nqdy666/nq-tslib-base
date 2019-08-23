@@ -1,6 +1,5 @@
 var typescript = require('rollup-plugin-typescript2');
 var babel = require('rollup-plugin-babel');
-
 var pkg = require('../package.json');
 
 // compatible with nq-tslib-base and @nianqin/nq-tslib-base

@@ -8,7 +8,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = global || self, factory(global['nq-tslib-base'] = {}));
+  (global = global || self, factory(global.nqTslibBase = {}));
 }(this, function (exports) { 'use strict';
 
   // plus a + b

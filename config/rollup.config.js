@@ -3,6 +3,7 @@
 var nodeResolve = require('rollup-plugin-node-resolve');
 var commonjs = require('rollup-plugin-commonjs');
 var uglify = require('rollup-plugin-uglify');
+var { camelCase } = require('lodash')
 
 var common = require('./rollup.js');
 
@@ -11,12 +12,12 @@ var prod = process.env.NODE_ENV === 'production';
 module.exports = {
     input: 'src/index.' + common.type,
     output: {
-        file: prod ? 'dist/index.aio.min.js' : 'dist/index.aio.js',
+        file: prod ? 'dist/' + common.name + '.min.js' : 'dist/' + common.name + '.js',
         format: 'umd',
         // When export and export default are not used at the same time, set legacy to true.
         // legacy: true,
-        name: common.name,
-        banner: common.banner,
+        name: camelCase(common.name),
+        banner: prod ? '' : common.banner,
     },
     plugins: [
         nodeResolve({

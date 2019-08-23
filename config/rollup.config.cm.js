@@ -5,7 +5,7 @@ var common = require('./rollup.js');
 module.exports = {
     input: 'src/index.' + common.type,
     output: {
-        file: 'dist/index.js',
+        file: 'dist/' + common.name + '.common.js',
         format: 'cjs',
         // When export and export default are not used at the same time, set legacy to true.
         // legacy: true,
