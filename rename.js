@@ -20,6 +20,8 @@ var map = [
   getFullPath('config/rollup.js'),
   getFullPath('test/browser/index.html'),
   getFullPath('demo/demo-global.html'),
+  getFullPath('demo/demo-node.html'),
+  getFullPath('demo/demo-amd.html'),
 ];
 
 const config = [{

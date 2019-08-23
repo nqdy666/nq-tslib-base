@@ -1,2 +1,2 @@
-var base = require('../dist/index.js');
-console.log(base.name);
+var base = require('../dist/nq-tslib-base.js');
+console.log(base.add(1, 1));
