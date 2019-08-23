@@ -7,9 +7,9 @@
 [![NPM downloads](http://img.shields.io/npm/dm/nq-tslib-base.svg?style=flat-square)](http://www.npmtrends.com/nq-tslib-base)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/nianqin/nq-tslib-base.svg)](http://isitmaintained.com/project/nianqin/nq-tslib-base "Percentage of issues still open")
 
-[English](./README.md) | 简体中文
+简体中文 | [English](./README.en.md)
 
-最好用的 `JS|TS` 第三方库脚手架，fork 或 clone 本仓库，即可搭建完成一个新库的基础框架
+最好用的 `TS` 第三方库脚手架，fork 或 clone 本仓库，即可搭建完成一个新库的基础框架
 
 **基于nq-tslib-base的库，都可以分享到[jsmini](https://github.com/jsmini)平台**
 
@@ -256,8 +256,3 @@ $ npm publish
 
 - [jsmini](https://github.com/jsmini)
 - [...](https://github.com/nianqin/nq-tslib-base/issues/10)
-
-## 相关链接
-
-- [typescript-library-template](https://github.com/jiumao-fe/typescript-library-template)
-
