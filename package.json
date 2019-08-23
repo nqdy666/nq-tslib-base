@@ -29,7 +29,7 @@
     "test": "npm run lint && nyc --nycrc-path .nycrc-ts mocha",
     "coveralls": "nyc --nycrc-path .nycrc-ts report --reporter=text-lcov | coveralls",
     "release": "npm test && npm run build && standard-version",
-    "standard-version": "npm test && npm run build && standard-version"
+    "standard-version": "standard-version"
   },
   "author": "nqdy666",
   "license": "MIT",
