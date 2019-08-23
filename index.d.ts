@@ -1,1 +1,1 @@
-export default function helloworld(): void;
+export declare function add(a: number, b: number): number;
