@@ -45,7 +45,6 @@
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
-    "@babel/runtime": "^7.5.5",
     "@babel/register": "^7.5.5",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
@@ -74,5 +73,6 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
+    "@babel/runtime": "^7.5.5",
   }
 }
