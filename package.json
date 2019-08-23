@@ -28,7 +28,7 @@
     "build": "npm run clean && npm run build:lib && npm run build:es && npm run build:umd && npm run build:cjs && npm run build:esm && npm run build:umd.min && npm run build:cjs.min",
     "test": "npm run lint && nyc --nycrc-path .nycrc-ts mocha",
     "coveralls": "nyc --nycrc-path .nycrc-ts report --reporter=text-lcov | coveralls",
-    "release:only": "git commit -am %npm_package_version% && git tag %npm_package_version% && git push && git push --tags",
+    "release:only": "git commit -am %npm_package_version% && git tag %npm_package_version% && git push && git push --tags && echo 'npm publish'",
     "release": "npm test && npm run build && npm run release:only"
   },
   "author": "nqdy666",
