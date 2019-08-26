@@ -1,6 +1,6 @@
 {
   "name": "nq-tslib-base",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "A modern Typescript library scaffolding",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
