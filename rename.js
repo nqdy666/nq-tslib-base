@@ -1,6 +1,6 @@
 var path = require('path');
 var { camelCase } = require('lodash')
-var cdkit = require('cdkit');
+var replace = require('replace-in-file');
 
 var fromLibName = 'nq-jslib-base';
 var toLibName = 'nq-tslib-base';
@@ -13,39 +13,26 @@ function getFullPath(filename) {
   return path.join(__dirname, filename)
 }
 
-var map = [
-  getFullPath('package.json'),
-  getFullPath('README.md'),
-  getFullPath('README.en.md'),
-  getFullPath('config/rollup.js'),
-  getFullPath('test/browser/index.html'),
-  getFullPath('demo/demo-global.html'),
-  getFullPath('demo/demo-node.js'),
-  getFullPath('demo/demo-amd.html'),
-];
+var options = {
+  files: [
+    getFullPath('package.json'),
+    getFullPath('README.md'),
+    getFullPath('README.en.md'),
+    getFullPath('config/rollup.js'),
+    getFullPath('test/browser/index.html'),
+    getFullPath('demo/demo-global.html'),
+    getFullPath('demo/demo-node.js'),
+    getFullPath('demo/demo-amd.html'),
+  ],
+  from: [new RegExp(fromLibName, 'g'), new RegExp(formAuthorName, 'g')],
+  to: [toLibName, toAuthorName],
+  countMatches: true,
+};
 
-const config = [{
-  root: '.',
-  rules: [{
-    test: function (pathname) {
-      return map.some(function (u) {
-        return pathname.indexOf(u) > -1;
-      });
-    },
-    replace: [{
-        from: fromLibName,
-        to: toLibName,
-      },
-      {
-        from: camelCase(fromLibName),
-        to: camelCase(toLibName),
-      },
-      {
-        from: formAuthorName,
-        to: toAuthorName,
-      },
-    ]
-  }]
-}, ];
-
-cdkit.run('replace', config);
+replace(options)
+  .then(results => {
+    console.log('Replacement results:', results);
+  })
+  .catch(error => {
+    console.error('Error occurred:', error);
+  });
