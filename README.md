@@ -3,7 +3,7 @@
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nqdy666/nq-tslib-base/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/nqdy666/nq-tslib-base.svg?branch=master)](https://travis-ci.org/nqdy666/nq-tslib-base)
 [![Coveralls](https://img.shields.io/coveralls/nqdy666/nq-tslib-base.svg)](https://coveralls.io/github/nqdy666/nq-tslib-base)
-[![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/nq-tslib-base)
+[![npm](https://img.shields.io/badge/npm-0.1.1-orange.svg)](https://www.npmjs.com/package/nq-tslib-base)
 [![NPM downloads](http://img.shields.io/npm/dm/nq-tslib-base.svg?style=flat-square)](http://www.npmtrends.com/nq-tslib-base)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/nqdy666/nq-tslib-base.svg)](http://isitmaintained.com/project/nqdy666/nq-tslib-base "Percentage of issues still open")
 
