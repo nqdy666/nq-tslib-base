@@ -25,6 +25,8 @@
 - 支持一键重命名
 - 集成ISSUE_TEMPLATE
 
+> 注意: 如果不同时使用 `export` 与 `export default` 可打开 `legacy模式`，`legacy模式` 下的模块系统可以兼容 `ie6-8`，见rollup配置文件
+
 ## :pill: 兼容性
 单元测试保证支持如下环境：
 
