@@ -3,7 +3,7 @@
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nqdy666/nq-tslib-base/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/nqdy666/nq-tslib-base.svg?branch=master)](https://travis-ci.org/nqdy666/nq-tslib-base)
 [![Coveralls](https://img.shields.io/coveralls/nqdy666/nq-tslib-base.svg)](https://coveralls.io/github/nqdy666/nq-tslib-base)
-[![npm](https://img.shields.io/badge/npm-0.1.1-orange.svg)](https://www.npmjs.com/package/nq-tslib-base)
+[![npm](https://img.shields.io/npm/v/nq-tslib-base)](https://www.npmjs.com/package/nq-tslib-base)
 [![NPM downloads](http://img.shields.io/npm/dm/nq-tslib-base.svg?style=flat-square)](http://www.npmtrends.com/nq-tslib-base)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/nqdy666/nq-tslib-base.svg)](http://isitmaintained.com/project/nqdy666/nq-tslib-base "Percentage of issues still open")
 
@@ -13,11 +13,11 @@
 
 ## :star: 特性
 
-- 支持ES6+或TypeScript编写源码，编译生成生产代码
+- 支持TypeScript编写源码，编译生成生产代码
 - 集成 babel-runtime (默认关闭)
 - 第三方依赖自动注入（自动剔除第三方依赖无用代码tree shaking）
 - 多环境支持（支持浏览器原生，支持AMD，CMD，支持Webpack，Rollup，fis等，支持Node）
-- 集成代码风格校验(eslint|tslint)
+- 集成代码风格校验(tslint)
 - 集成单元测试环境（mocha）
 - 集成测试覆盖率（istanbul）
 - 集成可持续构建工具[travis-ci](https://www.travis-ci.org/)
@@ -65,14 +65,14 @@ $ npm install --save nq-tslib-base
 如果你是node环境
 
 ```js
-const QuickApp = require('nq-tslib-base');
+const nqTslibBase = require('nq-tslib-base');
 
 ```
 
 如果你是webpack等环境
 
 ```js
-import QuickApp from 'nq-tslib-base';
+import nqTslibBase from 'nq-tslib-base';
 ```
 
 如果你是requirejs环境
@@ -142,3 +142,13 @@ $ npm publish
 [TODO.md](./TODO.md)
 
 ## :bulb: 谁在使用
+
+## 鸣谢
+- [jslib-base](https://github.com/yanhaijing/jslib-base/tree/babel)
+- [nqJslibBase-h5](https://github.com/jinwyp/nqJslibBase-h5)
+
+## 捐赠
+
+如果你觉得它有用，你可以给我买一杯奶茶。
+
+<img width="650" src="https://raw.githubusercontent.com/nqdy666/nq-tslib-base/master/qrcode-donation.png" alt="donation">
