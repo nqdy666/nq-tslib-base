@@ -146,3 +146,9 @@ $ npm publish
 ## 鸣谢
 [jslib-base](https://github.com/yanhaijing/jslib-base/tree/babel)
 [nqJslibBase-h5](https://github.com/jinwyp/nqJslibBase-h5)
+
+## 捐赠
+
+如果你觉得它有用，你可以给我买一杯奶茶。
+
+<img width="650" src="https://raw.githubusercontent.com/nqdy666/nq-jslib-base/master/qrcode-donation.png" alt="donation">
