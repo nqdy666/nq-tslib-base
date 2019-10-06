@@ -63,14 +63,14 @@ $ npm install --save nq-jslib-base
 如果你是node环境
 
 ```js
-const QuickApp = require('nq-jslib-base');
+const nqJslibBase = require('nq-jslib-base');
 
 ```
 
 如果你是webpack等环境
 
 ```js
-import QuickApp from 'nq-jslib-base';
+import nqJslibBase from 'nq-jslib-base';
 ```
 
 如果你是requirejs环境
@@ -143,4 +143,4 @@ $ npm publish
 
 ## 鸣谢
 [jslib-base](https://github.com/yanhaijing/jslib-base/tree/babel)
-[quickapp-h5](https://github.com/jinwyp/quickapp-h5)
+[nqJslibBase-h5](https://github.com/jinwyp/nqJslibBase-h5)
