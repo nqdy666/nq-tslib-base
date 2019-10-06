@@ -8,7 +8,7 @@ const { dependencies } = require('../package.json')
 var prod = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  input: 'src/index.' + common.type,
+  input: 'src/index.js',
   external: Object.keys(dependencies),
   output: {
     file: prod ? 'dist/' + common.name + '.esm.min.js' : 'dist/' + common.name + '.esm.js',

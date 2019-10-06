@@ -1,15 +1,15 @@
-# [nq-tslib-base](https://github.com/nqdy666/nq-tslib-base)
-[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/nqdy666/nq-tslib-base)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nqdy666/nq-tslib-base/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/nqdy666/nq-tslib-base.svg?branch=master)](https://travis-ci.org/nqdy666/nq-tslib-base)
-[![Coveralls](https://img.shields.io/coveralls/nqdy666/nq-tslib-base.svg)](https://coveralls.io/github/nqdy666/nq-tslib-base)
-[![npm](https://img.shields.io/badge/npm-0.1.1-orange.svg)](https://www.npmjs.com/package/nq-tslib-base)
-[![NPM downloads](http://img.shields.io/npm/dm/nq-tslib-base.svg?style=flat-square)](http://www.npmtrends.com/nq-tslib-base)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/nqdy666/nq-tslib-base.svg)](http://isitmaintained.com/project/nqdy666/nq-tslib-base "Percentage of issues still open")
+# [nq-jslib-base](https://github.com/nqdy666/nq-jslib-base)
+[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/nqdy666/nq-jslib-base)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nqdy666/nq-jslib-base/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/nqdy666/nq-jslib-base.svg?branch=master)](https://travis-ci.org/nqdy666/nq-jslib-base)
+[![Coveralls](https://img.shields.io/coveralls/nqdy666/nq-jslib-base.svg)](https://coveralls.io/github/nqdy666/nq-jslib-base)
+[![npm](https://img.shields.io/badge/npm-0.1.1-orange.svg)](https://www.npmjs.com/package/nq-jslib-base)
+[![NPM downloads](http://img.shields.io/npm/dm/nq-jslib-base.svg?style=flat-square)](http://www.npmtrends.com/nq-jslib-base)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/nqdy666/nq-jslib-base.svg)](http://isitmaintained.com/project/nqdy666/nq-jslib-base "Percentage of issues still open")
 
 简体中文 | [English](./README.en.md)
 
-最好用的 `TS` 第三方库脚手架，fork 或 clone 本仓库，即可搭建完成一个新库的基础框架
+最好用的 `JS` 第三方库脚手架，fork 或 clone 本仓库，即可搭建完成一个新库的基础框架
 
 ## :star: 特性
 
@@ -17,15 +17,13 @@
 - 集成 babel-runtime (默认关闭)
 - 第三方依赖自动注入（自动剔除第三方依赖无用代码tree shaking）
 - 多环境支持（支持浏览器原生，支持AMD，CMD，支持Webpack，Rollup，fis等，支持Node）
-- 集成代码风格校验(eslint|tslint)
+- 集成代码风格校验(eslint)
 - 集成单元测试环境（mocha）
 - 集成测试覆盖率（istanbul）
 - 集成可持续构建工具[travis-ci](https://www.travis-ci.org/)
 - 支持自定义banner
 - 支持一键重命名
 - 集成ISSUE_TEMPLATE
-
-> 注意: 如果不同时使用 `export` 与 `export default` 可打开 `legacy模式`，`legacy模式` 下的模块系统可以兼容 `ie6-8`，见rollup配置文件
 
 ## :pill: 兼容性
 单元测试保证支持如下环境：
@@ -59,20 +57,20 @@
 通过npm下载安装代码
 
 ```bash
-$ npm install --save nq-tslib-base
+$ npm install --save nq-jslib-base
 ```
 
 如果你是node环境
 
 ```js
-const QuickApp = require('nq-tslib-base');
+const QuickApp = require('nq-jslib-base');
 
 ```
 
 如果你是webpack等环境
 
 ```js
-import QuickApp from 'nq-tslib-base';
+import QuickApp from 'nq-jslib-base';
 ```
 
 如果你是requirejs环境
@@ -83,7 +81,7 @@ import QuickApp from 'nq-tslib-base';
 如果你是浏览器环境
 
 ```html
-<script src="node_modules/nq-tslib-base/dist/nq-tslib-base.min.js"></script>
+<script src="node_modules/nq-jslib-base/dist/nq-jslib-base.min.js"></script>
 ```
 
 ## :bookmark_tabs: 文档
@@ -133,7 +131,7 @@ $ npm publish
 
 ## 贡献者列表
 
-[contributors](https://github.com/nqdy666/nq-tslib-base/graphs/contributors)
+[contributors](https://github.com/nqdy666/nq-jslib-base/graphs/contributors)
 
 ## :gear: 更新日志
 [CHANGELOG.md](./CHANGELOG.md)
@@ -142,3 +140,7 @@ $ npm publish
 [TODO.md](./TODO.md)
 
 ## :bulb: 谁在使用
+
+## 鸣谢
+[jslib-base](https://github.com/yanhaijing/jslib-base/tree/babel)
+[quickapp-h5](https://github.com/jinwyp/quickapp-h5)

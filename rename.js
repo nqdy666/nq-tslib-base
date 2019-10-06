@@ -2,8 +2,8 @@ var path = require('path');
 var { camelCase } = require('lodash')
 var replace = require('replace-in-file');
 
-var fromLibName = 'nq-jslib-base';
-var toLibName = 'nq-tslib-base';
+var fromLibName = 'nq-tslib-base';
+var toLibName = 'nq-jslib-base';
 
 var formAuthorName = 'nianqin';
 var toAuthorName = 'nqdy666';
@@ -24,8 +24,8 @@ var options = {
     getFullPath('demo/demo-node.js'),
     getFullPath('demo/demo-amd.html'),
   ],
-  from: [new RegExp(fromLibName, 'g'), new RegExp(formAuthorName, 'g')],
-  to: [toLibName, toAuthorName],
+  from: [new RegExp(fromLibName, 'g'), new RegExp(camelCase(fromLibName), 'g'), new RegExp(formAuthorName, 'g')],
+  to: [toLibName, camelCase(toLibName), toAuthorName],
   countMatches: true,
 };
 

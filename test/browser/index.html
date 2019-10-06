@@ -18,12 +18,12 @@
     <script>
         mocha.setup('bdd');
     </script>
-    <script src="../../dist/nq-tslib-base.js"></script>
+    <script src="../../dist/nq-jslib-base.js"></script>
     <script>
         var libs = {
             'expect.js': expect,
             // ts
-            '../src/index.ts': window['nqTslibBase']
+            '../src/index.ts': window['nqJslibBase']
         };
         var require = function(path) {
             return libs[path];

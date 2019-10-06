@@ -1,7 +1,7 @@
 {
-  "name": "nq-tslib-base",
-  "version": "0.1.1",
-  "description": "A modern Typescript library scaffolding",
+  "name": "nq-jslib-base",
+  "version": "1.0.0",
+  "description": "A modern Javascript library scaffolding",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "jsnext:main": "es/index.js",
@@ -13,24 +13,22 @@
     "es",
     "types"
   ],
-  "sideEffects": false,
-  "srctype": "ts",
   "scripts": {
     "rename": "node rename.js",
     "clean": "rimraf ./dist ./es ./lib",
-    "lint": "eslint -c .eslintrc.js src/**/*.ts",
-    "lint:fix": "eslint -c .eslintrc.js src/**/*.ts --fix",
+    "lint": "eslint -c .eslintrc.js src/**/*.js",
+    "lint:fix": "eslint -c .eslintrc.js src/**/*.js --fix",
     "build:cjs": "rollup -c config/rollup.config.cm.js",
     "build:cjs.min": "cross-env NODE_ENV=production rollup -c config/rollup.config.cm.js",
     "build:esm": "rollup -c config/rollup.config.esm.js",
     "build:umd": "rollup -c config/rollup.config.js",
     "build:umd.min": "cross-env NODE_ENV=production npm run build:umd",
-    "build:lib": "babel src -d lib --extensions=.ts --no-babelrc --presets=@babel/preset-env,@babel/preset-typescript",
-    "build:es": "babel src -d es --extensions=.ts --no-babelrc --presets=@babel/preset-typescript",
+    "build:lib": "babel src -d lib --extensions=.js --no-babelrc --presets=@babel/preset-env",
+    "build:es": "babel src -d es --extensions=.js --no-babelrc",
     "build": "npm run clean && npm run build:lib && npm run build:es && npm run build:umd && npm run build:cjs && npm run build:esm && npm run build:umd.min && npm run build:cjs.min",
-    "test:only": "nyc --nycrc-path .nycrc-ts mocha",
+    "test:only": "nyc mocha --require @babel/register ./test/**/*.js",
     "test": "npm run lint && npm run test:only",
-    "coveralls": "nyc --nycrc-path .nycrc-ts report --reporter=text-lcov | coveralls",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "release:only": "git commit -am %npm_package_version% && git tag v%npm_package_version% && git push && git push --tags && echo 'i Run `npm publish` to publish'",
     "release": "npm test && npm run build && npm run release:only"
   },
@@ -38,20 +36,18 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nqdy666/nq-tslib-base"
+    "url": "https://github.com/nqdy666/nq-jslib-base"
   },
   "bugs": {
-    "url": "https://github.com/nqdy666/nq-tslib-base/issues"
+    "url": "https://github.com/nqdy666/nq-jslib-base/issues"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "@babel/preset-typescript": "^7.3.3",
     "@babel/register": "^7.5.5",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
-    "@typescript-eslint/parser": "^1.13.0",
     "babel-plugin-istanbul": "^5.2.0",
     "coveralls": "^3.0.6",
     "cross-env": "^5.2.0",
@@ -69,12 +65,8 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.2",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-typescript2": "^0.22.1",
     "rollup-plugin-uglify": "^6.0.2",
-    "source-map-support": "^0.5.13",
-    "ts-node": "^8.3.0",
-    "tslib": "^1.10.0",
-    "typescript": "^3.5.3"
+    "source-map-support": "^0.5.13"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5"

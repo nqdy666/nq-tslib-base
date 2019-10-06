@@ -11,7 +11,7 @@ var common = require('./rollup.js');
 var prod = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  input: 'src/index.' + common.type,
+  input: 'src/index.js',
   external: Object.keys(dependencies),
   output: {
     file: prod ? 'dist/' + common.name + '.min.js' : 'dist/' + common.name + '.js',
@@ -24,7 +24,7 @@ module.exports = {
   plugins: [
     nodeResolve({
       mainFields: ['module', 'main'],
-      extensions: [common.type === 'ts' ? '.ts' : '', '.js']
+      extensions: '.js'
     }),
     commonjs({
       include: 'node_modules/**',

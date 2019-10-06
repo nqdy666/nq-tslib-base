@@ -8,7 +8,7 @@ const { dependencies } = require('../package.json')
 var prod = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  input: 'src/index.' + common.type,
+  input: 'src/index.js',
   external: Object.keys(dependencies),
   output: {
     file: prod ? 'dist/' + common.name + '.common.min.js' : 'dist/' + common.name + '.common.js',
@@ -21,15 +21,7 @@ module.exports = {
     commonjs({
       include: 'node_modules/**',
     }),
-    common.getCompiler({
-      tsconfigOverride: {
-        compilerOptions: {
-          declaration: true,
-          module: 'ES2015'
-        }
-      },
-      useTsconfigDeclarationDir: true
-    }),
+    common.getCompiler(),
     (prod && uglify.uglify())
   ]
 };
